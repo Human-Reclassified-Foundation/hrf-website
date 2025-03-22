@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Reclassified Foundation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --accent: #ff006e;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        nav {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin: 3rem 0;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .mission-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .program-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .program-img {
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+        }
+        
+        .program-content {
+            padding: 1.5rem;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            text-align: center;
+            padding: 3rem;
+            border-radius: 8px;
+            color: white;
+            margin: 3rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #d10058;
+            transform: scale(1.05);
+        }
+        
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .contact-info {
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Human Reclassified Foundation</div>
+        <p>Exploring the intersection of AI, ethics, and society through storytelling</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#mission">Mission</a>
+            <a href="#programs">Programs</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Human Reclassified Foundation is a nonprofit organization based in Norwalk, California, dedicated to educating and inspiring the public through creative media and storytelling on the evolving relationship between humans and AI.</p>
+            <p>Established in 2025, we work at the intersection of technology, ethics, and creative expression to foster understanding about artificial intelligence's impact on society.</p>
+        </section>
+        
+        <section id="mission">
+            <h2>Our Mission</h2>
+            <div class="mission-box">
+                <p>"Human Reclassified Foundation is a nonprofit organization dedicated to exploring the intersection of artificial intelligence, ethics, and society through the power of storytelling. By producing educational media, hosting digital literacy programs, and fostering public discourse, we aim to inform and empower communities to navigate the evolving landscape of AI responsibly."</p>
+            </div>
+            <p>We operate exclusively for charitable and educational purposes within the meaning of Section 501(c)(3) of the Internal Revenue Code, focusing on public education about AI's ethical and societal impacts.</p>
+        </section>
+        
+        <section id="programs">
+            <h2>Our Programs</h2>
+            <div class="programs">
+                <div class="program-card">
+                    <div class="program-img">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="program-content">
+                        <h3>Immersive Storytelling</h3>
+                        <p>Creating films and interactive media that explore the relationship between humans and artificial intelligence, making complex concepts accessible through narrative.</p>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-img">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="program-content">
+                        <h3>Digital Literacy</h3>
+                        <p>Educational programs that help communities understand AI technologies, their applications, and potential impacts on daily life and future society.</p>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-img">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="program-content">
+                        <h3>Public Discourse</h3>
+                        <p>Hosting events, forums, and discussions that bring together diverse perspectives on AI ethics, governance, and the future of human-AI coexistence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="cta">
+            <h2 style="color: white;">Get Involved</h2>
+            <p>Join us in our mission to educate and inspire conversations about AI through storytelling.</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+        
+        <section id="team">
+            <h2>Our Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <div class="team-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Tanya Camburn</h3>
+                    <p>Chief Executive Officer</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Aaron Friedman</h3>
+                    <p>Chief Financial Officer</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Chau Vuong</h3>
+                    <p>Secretary</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out to learn more about our programs or to explore collaboration opportunities.</p>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 13101 Flallon Avenue, Norwalk, CA 90650</p>
+                <p><i class="fas fa-envelope"></i> info@humanreclassified.org</p>
+                <p><i class="fas fa-phone"></i> (562) 343-6138</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="logo">Human Reclassified Foundation</div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Human Reclassified Foundation. All rights reserved.</p>
+        <p>A 501(c)(3) nonprofit organization</p>
+    </footer>
+</body>
+</html>
